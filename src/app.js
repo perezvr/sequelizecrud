@@ -1,5 +1,7 @@
 import express from 'express';
 import routes from './routes' ;
+//Para importar o index.js com o mapeamento dos models
+import './database';
 
 class App {
   constructor() {

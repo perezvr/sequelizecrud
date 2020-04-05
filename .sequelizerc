@@ -1,0 +1,12 @@
+//Padronização dos caminhos independente do S.O.
+const {resolve} = require('path');
+
+module.exports   = {
+  //Caminho do arquivo de configuração do banco de dados
+  config: resolve(__dirname, 'src', 'config', 'database.js'),
+  //Caminho para o diretório de models
+  'models-path': resolve(__dirname, 'src', 'app', 'models'),
+  //Caminho para o diretório das migrations
+  'migrations-path': resolve(__dirname, 'src', 'database', 'migrations'),
+  'seeders-path': resolve(__dirname, 'src', 'database', 'seeds'),
+};
