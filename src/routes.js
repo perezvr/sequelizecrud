@@ -1,12 +1,12 @@
-//Router é o responsavel pelo gerenciamento de rotas do express
+// Router é o responsavel pelo gerenciamento de rotas do express
 import { Router } from 'express';
-//Importando o model a ser utilizado pela rota
+// Importando o model a ser utilizado pela rota
 import User from './app/models/User';
 
-//Criando o objeto das rotas diretamente do Router do express
+// Criando o objeto das rotas diretamente do Router do express
 const routes = new Router();
 
-//Criando as rotas
+// Criando as rotas
 routes.get('/', async (req, res) => {
   const user = await User.create({
     name: 'Renan Perez',
@@ -17,5 +17,5 @@ routes.get('/', async (req, res) => {
   return res.json(user);
 });
 
-//Deixando somente as rotas visíveis para outros arquivos
+// Deixando somente as rotas visíveis para outros arquivos
 export default routes;
