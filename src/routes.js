@@ -8,6 +8,9 @@ const routes = new Router();
 
 // Criando as rotas
 routes.post('/users', UserController.create);
+routes.put('/users', UserController.update);
+routes.get('/users/:id', UserController.get);
+routes.get('/users', UserController.list);
 routes.delete('/users/:id', UserController.delete);
 
 // Deixando somente as rotas visíveis para outros arquivos
